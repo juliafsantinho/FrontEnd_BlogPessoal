@@ -18,9 +18,9 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6}>
-                    <img src="https://i.imgur.com/Y1TxghI.png" alt="" width="900px" height="600px" className="imagem"/>
+                    <img src="https://i.imgur.com/Y1TxghI.png" alt="" width="900px" height="600px" className="imagem01"/>
                 </Grid>
-                <Grid xs={12} className="imagem">
+                <Grid xs={12} className="imagem01">
                 </Grid>
             </Grid>
         </>
