@@ -9,9 +9,11 @@ import { login } from '../../services/Service';
 
 
 function Login() {
-
+    // Redireciona o usuário para determinada pagina
     let history = useNavigate();
+    // Hooks que vão manipular o nosso Local Storage para gravar o Token
     const[token, setToken] = useLocalStorage('token');
+    // useState define como uma determinada variavel será inicializada quando o Comp. for renderizado
     const[userLogin, setUserLogin] = useState<UserLogin> (
         {
             id:0,
@@ -23,14 +25,14 @@ function Login() {
 
         }
     )
-
+    // Função que junto com a setUserLogin irá atualizar o valor inicial da userLogin
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
             ...userLogin,
             [e.target.name]: e.target.value
         })
     }
-
+     // Hook de efeito colateral, sempre executa uma função quando o que estiver no seu Array é alterado
         useEffect(() => {
             if (token != ''){
                 history('/posts')
