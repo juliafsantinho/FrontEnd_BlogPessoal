@@ -1,16 +1,25 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'
+import useLocalStorage from 'react-use-localstorage';
 
 function Navbar() {
+    const[token, setToken] = useLocalStorage('token');
+    let history = useNavigate();
+
+    function goLogout(){
+        setToken('')
+        alert("Usuário deslogado com sucesso!")
+        history('/login')
+    }
     return (
         <>
             <AppBar position="static">
                 <Toolbar variant="dense">
                     <Box mx={2} className='cursor' >
                         <Typography variant="h5" color="inherit">
-                           <h3>BlogPessoal</h3> 
+                           <h3>Blog Pessoal</h3> 
                         </Typography>
                     </Box>
 
@@ -21,29 +30,35 @@ function Navbar() {
                                 Home
                             </Typography>
                         </Box>
-                        </Link>
+                    </Link>
+                    <Link to='/posts' className='text-decorator-none'>
                         <Box mx={2} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 Postagens
                             </Typography>
                         </Box>
+                    </Link>
+                    <Link to='/temas' className='text-decorator-none'>
                         <Box mx={2} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 Temas
                             </Typography>
                         </Box>
+                    </Link> 
+                    <Link to='/formularioTema' className='text-decorator-none'>
                         <Box mx={2} className='cursor'>
                             <Typography variant="h6" color="inherit">
                                 Cadastrar Tema
                             </Typography>
                         </Box>
-                        <Link to='/login' className='text-decorator-none'>
-                            <Box mx={2} className='cursor'>
+                    </Link>  
+                        
+                            <Box mx={2} className='cursor' onClick={goLogout}>
                                 <Typography variant="h6" color="inherit">
                                     Logout
                                 </Typography>
                             </Box>
-                        </Link>
+                        
                     </Box>
 
                 </Toolbar>
