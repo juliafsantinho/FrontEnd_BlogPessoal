@@ -7,6 +7,7 @@ import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from "../../store/tokens/actions";
 import { ChangeEvent, useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 function Login() {
     let navigate = useNavigate();
@@ -43,10 +44,27 @@ function Login() {
             e.preventDefault();
             try{
                 await login(`/usuarios/logar`, userLogin, setToken)
+                toast.success('Usuário logado com sucesso!! 👍', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                })
 
-                alert('Usuário logado com sucesso!');
+
             }catch(error){
-                alert('Dados do usuário inconsistentes. Erro ao logar!');
+                toast.error('Dados do usuário inconsistentes! ❌', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                })
             }
         }
 

@@ -25,18 +25,14 @@ function TabPostagem() {
           </Box>
         </TabPanel>
         <TabPanel value="2">
+         
           <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">
-            Venho de Bauru/SP(A CIDADE DO LANCHE), tenho 24 anos, vivo em união estável. Iniciei minha vida profissional aos 14 anos como aprendiz em uma rede de Supermercados, onde consegui direcionamento para a área administrativa, já trabalhei na área de Marketing, com SAC, fui recepcionista de clinica de psicologia, trabalhei com documentação de veículos e até dentro de uma camara fria a -3° como digitadora. 
-            Sou nova, mas com toda essa bagagem posso dizer que adquiri muitas habilidades e competências, como Mentalidade de Crescimento, Persistência e Responsabilidade Pessoal.
-
-            Iniciei o ensino superior na UNIP cursando Biomedicína, tranquei com 1 ano e meio, pois não era o que eu queria, não estava feliz. Como gostava de algo movido mais para a prática eu reiniciei meus estudos na FATEC, lá cursei Sistemas Biomédicos até o 5º semestre, porém também tranquei o curso, mas não foi por falta de persistência e sim por ter me despertado o interesse em Desenvolvimento de Sistemas, pelo próprio curso que tinha umas matérias relacionais. E por ter passado por duas graduações, mesmo que incompletas, já trabalhei com muitos grupos e adquiri a habilidade de trabalhar em equipe.
-
-            Atualmente eu faço parte do bootcamp de Java Fullstack da Generation Brasil, onde iniciei querendo me encontrar na área de desenvolvimento e para ter certeza se é o que eu quero. No bootcamp tive a oportunidade de me desenvolver ainda mais profissionalmente realizando projetos em equipe e aprendendo e colocando em prática habilidades e mentalidades. Anteriormente já havia feito alguns cursos para entender um pouco sobre a lógica de programação e acabei adquirindo um certo conhecimento em JavaScript, HTML e CSS. Hoje com o bootcamp tenho conhecimente em muitas outras coisas, como JAVA, MySQL e Spring Boot. Minha parte back já considero bem avançada para quem começou sabendo somente a lógica.
-            E para finalizar, agora posso dizer que estou no caminho certo e já estou me preparando para iniciar a graduação de ADS no meio desse ano.
-    </Typography>
+      <Typography variant="body1" gutterBottom color="textPrimary" align="justify" >
+      Natural de Agudos/SP, tenho 24 anos, vivo em união estável. Iniciei minha vida profissional aos 14 anos como aprendiz em uma rede de Supermercados, onde consegui um direcionamento para a área administrativa, com isso posso dizer que adquiri muitas habilidades e competências, como a Responsabilidade Pessoal. Iniciei meus estudos na FATEC Bauru, cursei até o 5º semestre do curso de Sistemas Biomédicos, não dei continuidade no curso por ter me despertado o interesse em Desenvolvimento, através do próprio curso que continha matérias relacionais. Com essa experiência posso dizer que já trabalhei com muitos grupos e adquiri a habilidade de trabalhar em equipe. Por fim, atualmente estou finalizando o bootcamp de Java Fullstack da Generation Brasil, área que estou me aprofundando e aperfeiçoando para em breve iniciar uma nova graduação na área.
+      </Typography>
         </TabPanel>
       </TabContext>
+      
     </>
   );
 }
