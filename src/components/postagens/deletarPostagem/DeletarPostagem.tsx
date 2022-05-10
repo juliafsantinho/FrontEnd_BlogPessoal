@@ -53,7 +53,7 @@ function DeletarPostagem() {
                 'Authorization': token
               }
             });
-            toast.info('Postagem deletada com sucesso! ✔', {
+            toast.success('Postagem deletada com sucesso! ✔', {
               position: "top-right",
               autoClose: 5000,
               hideProgressBar: false,
