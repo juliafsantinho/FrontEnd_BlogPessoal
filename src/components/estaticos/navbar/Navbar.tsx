@@ -73,7 +73,7 @@ function Navbar() {
               
                     <Box mx={1} className='cursor' onClick={goLogout}>
                         <Typography variant="h6" color="inherit">
-                            logout
+                            Deslogar
                         </Typography>
                     </Box>
                 
